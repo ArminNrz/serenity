@@ -17,3 +17,4 @@ The overall project structure is shown below:
 ## Reporting
 
 The Serenity reports will be generated in the `target/site/serenity` directory.
+
