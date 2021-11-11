@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.extern.slf4j.Slf4j;
 import net.serenitybdd.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,6 +22,9 @@ public class ATestPage extends PageObject {
     @FindBy(css = "div.hdtb-mitem:nth-child(2) > a:nth-child(1)")
     private WebElement googleImageButton;
 
+    @FindBy(xpath = "//*[@id='islrg']/div[1]/div[1]/a[1]/div[1]/img")
+    private WebElement firstImage;
+
     public void iLunchTheBrowsers() {
         this.open();
     }
@@ -33,5 +37,11 @@ public class ATestPage extends PageObject {
     public void openGoogleImages() {
         googleImageButton.click();
 
+    }
+
+    public void openFirstGoogleImage() {
+        String imageUrl = firstImage.getAttribute("src");
+        getDriver().get(imageUrl);
+        waitABit(2000);
     }
 }

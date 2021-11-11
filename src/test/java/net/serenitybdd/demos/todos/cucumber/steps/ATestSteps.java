@@ -1,5 +1,6 @@
 package net.serenitybdd.demos.todos.cucumber.steps;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.demos.todos.pageobjects.features.TestPage.ATestPage;
@@ -23,5 +24,10 @@ public class ATestSteps {
     @Then("open google images")
     public void openGoogleImages() {
         stepPage.openGoogleImages();
+    }
+
+    @Given("open first google image")
+    public void openFirstGoogleImage() {
+        stepPage.openFirstGoogleImage();
     }
 }

@@ -7,3 +7,4 @@ Feature: Login in AMS req
     When I lunch the browser
     Then search "cucumber" in google
     Then open google images
+    Given open first google image
